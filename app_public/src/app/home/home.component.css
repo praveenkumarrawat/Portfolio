@@ -1,0 +1,274 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+.homepage {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  background-color: #25274d;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Header */
+.fullscreen-header {
+  /* background: url('../../assets/images/header.svg') no-repeat center center/cover; */
+  height: 100vh;
+  display: flex;
+  align-items: center;   /* Vertically centers content */
+  justify-content:space-around;
+  color: white;
+  padding-left: 8%;
+}
+
+.message {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Ensures h1 + p are centered as a block */
+  height: 100%;            /* Take full header height */
+}
+
+.message h1 {
+  font-size: 4rem;
+  font-weight: 900;
+  color: #2e9cca;
+  margin-bottom: 10px;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.4);
+}
+
+.message p {
+  font-size: 1.5rem;
+  color: #ccc;
+}
+
+/* About */
+.about-section {
+  padding: 80px 10%;
+  background: #2d2f5d;
+  color: #fff;
+  /* border-radius: 16px; */
+  box-shadow: 0 6px 16px rgba(0,0,0,0.3);
+  margin-bottom: 60px;
+}
+
+.about-section .section-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.about-section .section-header h2 {
+  font-size: 2.8rem;
+  font-weight: 700;
+  color: #AAABB8;
+}
+
+.about-section .about-description {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #ddd;
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.about-section .about-description span {
+  color: #2e9cca;
+  font-weight: 600;
+}
+
+/* === Tech Stack Section === */
+.tech-stack {
+  padding: 80px 10%;
+  background: #1f2235;
+  /* border-radius: 16px; */
+  margin-bottom: 60px;
+}
+
+.tech-stack .section-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.tech-stack .section-header h2 {
+  font-size: 2.8rem;
+  font-weight: 700;
+  color: #AAABB8;
+}
+
+.tech-stack .section-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(220px,1fr));
+  gap: 25px;
+}
+
+.tech-stack .section {
+  background: #2d2f5d;
+  border-radius: 12px;
+  padding: 25px;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+
+.tech-stack h1 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #2e9cca;
+  margin-bottom: 10px;
+}
+
+.tech-stack p {
+  color: #ccc;
+  font-size: 0.95rem;
+}
+
+/* Projects */
+
+/* Projects */
+.projects-section {
+  padding: 60px 10%;
+  background: #1f2235;
+}
+
+.projects-section .section-header h2 {
+  font-size: 3rem;
+  color: #AAABB8;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.grid-item {
+  background: #AAABB8;
+  padding: 20px;
+  border-radius: 12px;
+  color: #25274d;
+  transition: transform .3s ease, background-color .3s ease;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+.grid-item:hover {
+  background-color: #2e9cca;
+  color: #fff;
+  transform: translateY(-6px);
+}
+
+.grid-item img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 15px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.25);
+  transition: transform .3s ease;
+}
+
+.grid-item img:hover {
+  transform: scale(1.03);
+}
+
+.grid-item h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.grid-item p {
+  font-size: 0.95rem;
+  text-align: justify;
+}
+
+/* Project Links (GitHub Button) */
+.grid-item .btn {
+  display: inline-block;
+  margin-top: 12px;
+  padding: 10px 18px;
+  background: #2e9cca;
+  color: #fff;
+  font-weight: 600;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: background .3s ease;
+}
+
+.grid-item .btn:hover {
+  background: #1f7aa8;
+}
+
+
+/* Contact */
+.contact-section {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 60px 10%;
+  background: #25274d;
+  gap: 30px;
+}
+.contact-section h2 {
+  font-size: 2.5rem;
+  color: #AAABB8;
+  margin-bottom: 20px;
+}
+.contact-info h3 {
+  font-size: 1.2rem;
+  color: #ccc;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 15px 0;
+}
+.contact-info .icon {
+  height: 22px;
+  width: 22px;
+  object-fit: contain;
+  transition: transform .2s ease;
+}
+.contact-info .icon:hover {
+  transform: scale(1.2);
+}
+.resume-download h2 {
+  font-size: 1.8rem;
+  color: #AAABB8;
+  text-align: center;
+  margin-bottom: 20px;
+}
+.resume-download form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  align-items: center;
+}
+.resume-download input {
+  width: 100%;
+  max-width: 400px;
+  padding: 12px;
+  background: #464866;
+  border: none;
+  border-radius: 6px;
+  color: #fff;
+}
+.resume-download button {
+  padding: 12px 30px;
+  background: #2e9cca;
+  color: #fff;
+  font-weight: bold;
+  border: none;
+  border-radius: 6px;
+  transition: background .3s ease;
+}
+.resume-download button:hover {
+  background: #1f7aa8;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .my-place {
+    flex-direction: column;
+    text-align: center;
+  }
+  .contact-section {
+    flex-direction: column;
+  }
+}

@@ -1,0 +1,22 @@
+
+
+<div class="header">
+  <mat-sidenav-container class="sidenav-container" [hasBackdrop]="false">
+    <mat-toolbar class="transparent-toolbar">
+      <span class="toolbar-name">CodeX</span>
+      <button mat-icon-button (click)="toggleMenu()" class="menu-button">
+        <mat-icon [class.light-icon]="!isHome">{{ isMenuOpen ? 'close' : 'menu' }}</mat-icon>
+      </button>
+      <mat-sidenav #sidenav mode="over" position="end" class="sidenav" [(opened)]="isMenuOpen">
+        <ul class="headerList">
+          <li *ngFor="let link of links" class="headerListItem">
+            <a href="javascript:void(0);" (click)="navigate(link.path)" class="headerLink" mat-button routerLinkActive="active" (click)="closeMenu()">
+              <mat-icon class="large-icon" [class.large-icon-light]="!isHome">{{link.icon}}</mat-icon>
+              <span [class.light-text]="!isHome">{{link.name}}</span>
+            </a>
+          </li>
+        </ul>
+      </mat-sidenav>
+    </mat-toolbar>
+  </mat-sidenav-container>
+</div>

@@ -1,0 +1,148 @@
+<div class="homepage">
+  <!-- Fullscreen Header -->
+  <header class="fullscreen-header">
+  <img src="../../assets/images/profile.jpg" 
+       alt="Profile Picture" 
+       style="width: 420px; height: 420px; border-radius: 10px; object-fit: cover; border: 4px solid #2e9cca; box-shadow: 0 4px 12px rgba(0,0,0,0.3); margin-right: 40px;">
+  
+  <div class="message">
+    <h1>Hi, I'm Praveen</h1><br>
+    <p>Aspiring Software Developer | Problem Solver | Tech Enthusiast</p>
+  </div>
+</header>
+
+
+  <!-- About Section -->
+ <section class="my-place about-section">
+  <div class="text-section">
+    <div class="section-header">
+      <h2>About Me</h2>
+      <div class="underline"></div>
+    </div>
+    <p class="about-description">
+      I am a <span>Computer Science student</span> passionate about building impactful software solutions. 
+      With hands-on experience in <span>Web Development</span>, <span>Data Science</span>, and <span>Problem Solving</span>, 
+      I thrive on learning emerging technologies and creating projects that make a real difference.
+    </p>
+  </div>
+</section>
+
+
+  <!-- Tech Stack -->
+  <section class="my-place">
+    <div class="text-section tech-stack">
+      <div class="section-header">
+        <h2>Tech Stack</h2>
+      </div>
+      <div class="section-container">
+        <div class="section">
+          <h1>Languages</h1>
+          <p>C, C++, Java, Python, JavaScript</p>
+        </div>
+        <div class="section">
+          <h1>Web</h1>
+          <p>HTML, CSS, Tailwind, React, Angular</p>
+        </div>
+        <div class="section">
+          <h1>Databases</h1>
+          <p>MySQL, MongoDB</p>
+        </div>
+        <div class="section">
+          <h1>Tools</h1>
+          <p>Git, GitHub, VS Code, Eclipse</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects -->
+<section id="projects">
+  <div class="projects-section">
+    <div class="section-header">
+      <h2 ref="projects">Projects</h2>
+    </div>
+    <div class="grid-container">
+
+      <div class="grid-item">
+        <img src="../../assets/images/1.png" alt="Chat App Project">
+        <h3>BaatCheet – Chat Application</h3>
+        <p>
+          A full-stack real-time chat app where users can register, log in securely, and exchange messages in private chats. 
+          Implemented authentication using JWT, password hashing with bcrypt, and real-time communication with Socket.IO.
+        </p>
+        <a href="https://github.com/praveenkumarrawat/BaatCheet---A-Chat-Application/tree/main" class="btn">View on GitHub</a>
+      </div>
+
+      <div class="grid-item">
+        <img src="../../assets/images/2.png" alt="AI Image Enhancer Project">
+        <h3>AI Image Enhancer</h3>
+        <p>
+          A responsive AI-based image enhancement web app that allows users to upload and enhance images in real time 
+          using a third-party API. Built with React.js and Tailwind CSS.
+        </p>
+        <a href="https://github.com/praveenkumarrawat/AI-Image-Enhancer/tree/main" class="btn">View on GitHub</a>
+      </div>
+
+      <div class="grid-item">
+        <img src="../../assets/images/3.png" alt="Typing Master Project">
+        <h3>Typing Master – Web App</h3>
+        <p>
+          A typing test platform that provides real-time feedback on accuracy, words per minute, and errors, 
+          with over 95% accuracy in error detection. Built with HTML, CSS, and JavaScript.
+        </p>
+        <a href="https://github.com/praveenkumarrawat/Typing-Master" class="btn">View on GitHub</a>
+      </div>
+
+
+
+    </div>
+  </div>
+</section>
+
+
+  <!-- Contact -->
+  <section id="contact">
+    <div class="contact-section">
+      <div class="contact-info">
+        <h2>Contact Me</h2>
+        <h3>
+          <a href="mailto:praveenrawat281308@gmail.com">
+            <img src="assets/images/Email.svg" alt="email Icon" class="icon">
+          </a>
+          praveenrawat281308&#64;gmail.com
+        </h3>
+        <h3>
+          <a href="tel:+918859045783">
+            <img src="assets/images/Phone.svg" alt="Phone Icon" class="icon">
+          </a>
+          +91 8859045783
+        </h3>
+        <h3>
+          <a href="https://leetcode.com/u/praveenkumarrawat/">
+            <img src="assets/images/LinkedIn.svg" alt="LeetCode Icon" class="icon">
+          </a>
+          leetcode.com/u/praveenkumarrawat
+        </h3>
+        <h3>
+          <a href="https://github.com/praveenkumarrawat">
+            <img src="assets/images/GitHub.svg" alt="GitHub Icon" class="icon">
+          </a>
+          github.com/praveenkumarrawat
+        </h3>
+      </div>
+
+      <div class="resume-download">
+        <h2>Download My CV</h2>
+        <form [formGroup]="downloadForm" (ngSubmit)="onSubmit()">
+          <input type="text" formControlName="name" placeholder="Your Name" required>
+          <input type="text" formControlName="company" placeholder="Your Company" required>
+          <input type="email" formControlName="email" placeholder="Your Email" required>
+          <button type="submit" [disabled]="downloadForm.invalid">Download</button>
+          <p *ngIf="downloadForm.invalid && downloadForm.touched" class="form-error">
+            Please fill out all fields and enter a valid email.
+          </p>
+        </form>
+      </div>
+    </div>
+  </section>
+</div>
